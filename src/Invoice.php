@@ -369,16 +369,16 @@ class Invoice implements XmlSerializable
     /**
      * @return AdditionalDocumentReferences
      */
-    public function getAdditionalDocumentReferences(): ?AdditionalDocumentReferences
+    public function getAdditionalDocumentReferences(): ?array
     {
-        return $this->additionalDocumentReferences;
+        return $this->C;
     }
 
     /**
      * @param AdditionalDocumentReference $additionalDocumentReference
      * @return Invoice
      */
-    public function setAdditionalDocumentReferences(AdditionalDocumentReferences $additionalDocumentReferences): Invoice
+    public function setAdditionalDocumentReferences(array $additionalDocumentReferences): Invoice
     {
         $this->additionalDocumentReferences = $additionalDocumentReferences;
         return $this;
