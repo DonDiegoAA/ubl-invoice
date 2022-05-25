@@ -12,6 +12,7 @@ class Invoice implements XmlSerializable
 {
     private $UBLVersionID = '2.1';
     private $customizationID = '1.0';
+    private $profileID = 'urn:fdc:peppol.eu:2017:poacc:billing:01:1.0';
     private $id;
     private $copyIndicator;
     private $issueDate;
@@ -540,6 +541,7 @@ class Invoice implements XmlSerializable
         $writer->write([
             Schema::CBC . 'UBLVersionID' => $this->UBLVersionID,
             Schema::CBC . 'CustomizationID' => $this->customizationID,
+            Schema::CBC . 'ProfileID' => $this->$profileID,
             Schema::CBC . 'ID' => $this->id
         ]);
 
