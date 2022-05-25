@@ -541,7 +541,7 @@ class Invoice implements XmlSerializable
         $writer->write([
             Schema::CBC . 'UBLVersionID' => $this->UBLVersionID,
             Schema::CBC . 'CustomizationID' => $this->customizationID,
-            Schema::CBC . 'ProfileID' => $this->$profileID,
+            Schema::CBC . 'ProfileID' => $this->profileID,
             Schema::CBC . 'ID' => $this->id
         ]);
 
