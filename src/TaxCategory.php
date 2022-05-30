@@ -175,6 +175,7 @@ class TaxCategory implements XmlSerializable
     {
         $this->validate();
 
+        /*
         $writer->write([
             [
                 'name' => Schema::CBC . 'ID',
@@ -182,7 +183,12 @@ class TaxCategory implements XmlSerializable
                 'attributes' => $this->idAttributes,
             ],
         ]);
-
+        */
+        
+        $writer->write([
+            Schema::CBC . 'ID' => $this->getId(),
+        ]);
+        
         if ($this->name !== null) {
             $writer->write([
                 Schema::CBC . 'Name' => $this->name,
